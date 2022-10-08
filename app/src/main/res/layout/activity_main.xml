@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#afeeee"
+     >
+
+    <Button
+        android:id="@+id/bttest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button2"
+        android:text="测试" />
+
+    <Button
+        android:id="@+id/btim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bttest"
+        android:layout_alignBottom="@+id/bttest"
+        android:layout_alignParentLeft="true"
+        android:text="重点" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bttest"
+        android:layout_alignBottom="@+id/bttest"
+        android:layout_alignParentRight="true"
+        android:text="0个数字"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toLeftOf="@+id/textView2"
+        android:text="二进制" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btim"
+        android:layout_alignBottom="@+id/btim"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/btim"
+        android:text="0s" />
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:numColumns="3" >
+
+    </GridView>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bttest"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_toStartOf="@+id/bttest" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/bttest"
+        android:layout_below="@+id/gridView1"
+        android:layout_above="@+id/bttest">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btsub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="-" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_above="@+id/bttest"
+        android:id="@+id/edim"
+        android:layout_alignStart="@+id/bttest"
+        android:layout_toStartOf="@+id/button2"
+        android:hint="重点" />
+
+
+</RelativeLayout>
